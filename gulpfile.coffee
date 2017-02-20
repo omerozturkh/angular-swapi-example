@@ -11,7 +11,7 @@ sass = require 'gulp-sass'
 
 gulp.task 'connect', ->
 	connect.server
-		port: 5000,
+		port: 3000,
 		root: './',
 		# root: path.resolve('.'),
 		livereload: true
