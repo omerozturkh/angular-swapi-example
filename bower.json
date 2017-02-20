@@ -1,0 +1,11 @@
+{
+	"name": "angular-swapi-sample-project",
+	"license": "ISC",
+	"private": true,
+	"dependencies": {
+		"angular-resource": "1.6.x",
+		"angular-cookies": "1.6.x",
+		"angular-ui-router": "0.3.2",
+		"bootstrap": "^3.3.7"
+	}
+}

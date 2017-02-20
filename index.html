@@ -1,0 +1,63 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>Star Wars | Example</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/main.css">
+
+	<!-- <script src="assets/scripts/js/plugins.js"></script> -->
+
+	<script type="text/javascript" src="assets/vendor/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="assets/vendor/bootstrap/dist/js/bootstrap.js"></script>
+
+	<script type="text/javascript" src="assets/vendor/angular/angular.js"></script>
+	<script type="text/javascript" src="assets/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+
+	<script type="text/javascript" src="assets/vendor/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="assets/vendor/angular-cookies/angular-cookies.js"></script>
+
+	<!-- <script src="assets/scripts/js/scripts.js"></script> -->
+
+	<script src="assets/scripts/js/app.js"></script>
+	<script src="assets/scripts/js/services.js"></script>
+	<script src="assets/scripts/js/controllers.js"></script>
+	</head>
+	<body ng-app="SwApp">
+
+
+	<div id="loading" class="hidden">
+		<img src="assets/images/loading.gif">
+	</div>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Star Wars</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-left" ng-if="logged()">
+					<li><a ui-sref="people" ui-sref-active="active">Peoples</a></li>
+					<li><a ui-sref="planet" ui-sref-active="active">Planets</a></li>
+					<li><a ui-sref="logout" ui-sref-active="active">Logout</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" ng-if="!logged()">
+					<li><a ui-sref="login" ui-sref-active="active">Login</a></li>
+					<li><a ui-sref="register" ui-sref-active="active">Register</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+		<ui-view></ui-view>
+	</div>
+	</body>
+	</html>

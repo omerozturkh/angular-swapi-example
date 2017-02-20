@@ -1,0 +1,15 @@
+<div class="col-lg-6 bounceInDown">
+	<table class="table table-striped table-bordered">
+	<tr>
+		<th><h4>Planets</h1></th>
+	</tr>
+		<tr ng-repeat="planet in planets.results">
+			<td><a ui-sref="planet_detail({id: planet.id})">{{planet.name}}</a></td>
+		</tr>
+	</table>
+
+	<div ng-if="planets.results">
+		<button class="prev btn btn-default" ng-disabled="!planets.previous" ng-click="prevPage()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+		<button class="next btn btn-default" ng-disabled="!planets.next" ng-click="nextPage()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+	</div>
+</div>
